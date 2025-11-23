@@ -1,25 +1,22 @@
 {
-  "name": "@toon-format/monorepo",
+  "name": "json-toon",
   "type": "module",
   "version": "1.3.0",
   "private": true,
-  "packageManager": "pnpm@10.21.0",
+  "workspaces": [
+    "toon"
+  ],
   "scripts": {
-    "build": "pnpm -r --filter=./packages/** run build",
-    "automd": "automd",
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs",
+    "build": "yarn workspace @toon-format/toon run build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "test": "pnpm -r test",
+    "test": "yarn workspace @toon-format/toon run test",
     "test:types": "tsc --noEmit",
     "release": "bumpp -r"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^6.2.0",
     "@types/node": "^24.10.0",
-    "automd": "^0.4.2",
     "bumpp": "^10.3.1",
     "eslint": "^9.39.1",
     "tsdown": "^0.16.2",
