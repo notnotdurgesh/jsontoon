@@ -14,6 +14,11 @@
     "test:types": "tsc --noEmit",
     "release": "bumpp -r"
   },
+  "dependencies": {
+    "@anthropic-ai/tokenizer": "^0.0.4",
+    "@lenml/tokenizer-gemini": "^3.7.2",
+    "js-tiktoken": "^1.0.21"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^6.2.0",
     "@types/node": "^24.10.0",

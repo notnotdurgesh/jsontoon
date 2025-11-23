@@ -7,4 +7,5 @@ toon/dist
 toon/node_modules
 toon/package-lock.json
 yarn.lock
+package-lock.json
 .env
